@@ -21,8 +21,9 @@ namespace Vitas_Stock
         private void Form1_Load(object sender, EventArgs e)
         {
 
+
         }
 
-        
+
     }
 }
