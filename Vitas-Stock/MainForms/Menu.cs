@@ -68,7 +68,7 @@ namespace FE
 
         private void frmMenu_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = pro.MostrarProd();
+            //dataGridView1.DataSource = pro.MostrarProd();
         }
     }
 }
