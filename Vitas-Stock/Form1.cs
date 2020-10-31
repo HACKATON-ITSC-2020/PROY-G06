@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+//pruebazsczc
 namespace Vitas_Stock
 {
     public partial class Form1 : Form
