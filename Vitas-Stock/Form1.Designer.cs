@@ -54,16 +54,19 @@
             this.fechaingresoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechavencDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fKLotesArticuloBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.controlStockDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.articuloBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKLotesArticuloBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.articuloBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKLotesArticuloBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(554, 140);
+            this.button1.Location = new System.Drawing.Point(573, 140);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(234, 33);
             this.button1.TabIndex = 0;
@@ -96,11 +99,11 @@
             this.fechaingresoDataGridViewTextBoxColumn,
             this.cantidadDataGridViewTextBoxColumn,
             this.fechavencDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.fKLotesArticuloBindingSource;
+            this.dataGridView1.DataSource = this.fKLotesArticuloBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(12, 125);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(568, 313);
+            this.dataGridView1.Size = new System.Drawing.Size(544, 207);
             this.dataGridView1.TabIndex = 3;
             // 
             // label1
@@ -252,11 +255,26 @@
             this.fechavencDataGridViewTextBoxColumn.Name = "fechavencDataGridViewTextBoxColumn";
             this.fechavencDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // fKLotesArticuloBindingSource1
+            // 
+            this.fKLotesArticuloBindingSource1.DataMember = "FK_Lotes_Articulo";
+            this.fKLotesArticuloBindingSource1.DataSource = this.articuloBindingSource;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(562, 256);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(234, 33);
+            this.button5.TabIndex = 14;
+            this.button5.Text = "modificar";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -279,6 +297,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.articuloBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKLotesArticuloBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.articuloBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKLotesArticuloBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -311,6 +330,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaingresoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechavencDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource fKLotesArticuloBindingSource1;
+        private System.Windows.Forms.Button button5;
     }
 }
 
