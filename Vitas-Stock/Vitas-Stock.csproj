@@ -53,35 +53,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ControlStockDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ControlStockDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="datos\Articulo.cs">
-      <DependentUpon>dbStock.tt</DependentUpon>
-    </Compile>
-    <Compile Include="datos\dbStock.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dbStock.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="datos\dbStock.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dbStock.tt</DependentUpon>
-    </Compile>
-    <Compile Include="datos\dbStock.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dbStock.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="datos\Lotes.cs">
-      <DependentUpon>dbStock.tt</DependentUpon>
-    </Compile>
-    <Compile Include="datos\sysdiagrams.cs">
-      <DependentUpon>dbStock.tt</DependentUpon>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,24 +73,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EntityDeploy Include="datos\dbStock.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>dbStock.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="ControlStockDataSet.xsc">
-      <DependentUpon>ControlStockDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="ControlStockDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ControlStockDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ControlStockDataSet.xss">
-      <DependentUpon>ControlStockDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="datos\dbStock.edmx.diagram">
-      <DependentUpon>dbStock.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -135,18 +88,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup />
-  <ItemGroup>
-    <Content Include="datos\dbStock.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>dbStock.Context.cs</LastGenOutput>
-      <DependentUpon>dbStock.edmx</DependentUpon>
-    </Content>
-    <Content Include="datos\dbStock.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>dbStock.edmx</DependentUpon>
-      <LastGenOutput>dbStock.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
