@@ -18,7 +18,7 @@ namespace Datos
         {
 
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "select * from Articulo";
+            comando.CommandText = "select  a.nombre , l.fecha_ingreso, l.cantidad, l.fecha_venc from Articulo a, Lotes l where a.id_articulo = l.cod_articulo";
             leer = comando.ExecuteReader();
             tabla.Load(leer);
             conexion.CerrarConexion();

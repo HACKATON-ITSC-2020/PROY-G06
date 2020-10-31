@@ -8,13 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Negocio;
 
 //pruebazsczc
 //nuevo comentario
 namespace FE
 {
+
     public partial class frmMenu : Form
     {
+        CN_Productos pro = new CN_Productos();
         public frmMenu()
         {
             InitializeComponent();
@@ -61,6 +64,11 @@ namespace FE
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void frmMenu_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = pro.MostrarProd();
         }
     }
 }

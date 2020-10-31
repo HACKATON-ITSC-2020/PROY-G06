@@ -7,7 +7,7 @@ using System.Data;
 
 namespace Negocio
 {
-    class CN_Productos
+  public  class CN_Productos
     {
         private CD_Productos objetoCD = new CD_Productos();
         public DataTable MostrarProd()

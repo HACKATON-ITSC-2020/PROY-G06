@@ -100,5 +100,11 @@
   <ItemGroup>
     <None Include="Resources\icoFarmacia.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Negocio\Negocio.csproj">
+      <Project>{b96a7261-decf-4c6c-8be9-c6620b7c9a05}</Project>
+      <Name>Negocio</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
