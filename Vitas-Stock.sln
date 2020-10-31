@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vitas-Stock", "Vitas-Stock\Vitas-Stock.csproj", "{37851679-371D-4B3F-8AA2-6F4AFC90DC88}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FE", "Vitas-Stock\FE.csproj", "{37851679-371D-4B3F-8AA2-6F4AFC90DC88}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BA", "BA\BA.csproj", "{A8049DE2-260E-451F-8C9A-28CA35A289C6}"
 EndProject

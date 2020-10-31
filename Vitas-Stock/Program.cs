@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Vitas_Stock
+namespace FE
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace Vitas_Stock
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new frmMenu());
         }
     }
 }
