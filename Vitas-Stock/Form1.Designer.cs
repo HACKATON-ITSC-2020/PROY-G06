@@ -33,6 +33,14 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idloteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codarticuloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaingresoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechavencDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fKLotesArticuloBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.articuloBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.controlStockDataSet = new Vitas_Stock.ControlStockDataSet();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -43,30 +51,20 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.controlStockDataSet = new Vitas_Stock.ControlStockDataSet();
-            this.articuloBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.articuloTableAdapter = new Vitas_Stock.ControlStockDataSetTableAdapters.ArticuloTableAdapter();
-            this.fKLotesArticuloBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lotesTableAdapter = new Vitas_Stock.ControlStockDataSetTableAdapters.LotesTableAdapter();
             this.articuloBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.idloteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codarticuloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaingresoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechavencDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fKLotesArticuloBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.controlStockDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.articuloBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKLotesArticuloBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.articuloBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.controlStockDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.articuloBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKLotesArticuloBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(573, 140);
+            this.button1.Location = new System.Drawing.Point(554, 140);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(234, 33);
             this.button1.TabIndex = 0;
@@ -99,12 +97,62 @@
             this.fechaingresoDataGridViewTextBoxColumn,
             this.cantidadDataGridViewTextBoxColumn,
             this.fechavencDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.fKLotesArticuloBindingSource1;
+            this.dataGridView1.DataSource = this.fKLotesArticuloBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 125);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(544, 207);
+            this.dataGridView1.Size = new System.Drawing.Size(568, 313);
             this.dataGridView1.TabIndex = 3;
+            // 
+            // idloteDataGridViewTextBoxColumn
+            // 
+            this.idloteDataGridViewTextBoxColumn.DataPropertyName = "id_lote";
+            this.idloteDataGridViewTextBoxColumn.HeaderText = "id_lote";
+            this.idloteDataGridViewTextBoxColumn.Name = "idloteDataGridViewTextBoxColumn";
+            this.idloteDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // codarticuloDataGridViewTextBoxColumn
+            // 
+            this.codarticuloDataGridViewTextBoxColumn.DataPropertyName = "cod_articulo";
+            this.codarticuloDataGridViewTextBoxColumn.HeaderText = "cod_articulo";
+            this.codarticuloDataGridViewTextBoxColumn.Name = "codarticuloDataGridViewTextBoxColumn";
+            this.codarticuloDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fechaingresoDataGridViewTextBoxColumn
+            // 
+            this.fechaingresoDataGridViewTextBoxColumn.DataPropertyName = "fecha_ingreso";
+            this.fechaingresoDataGridViewTextBoxColumn.HeaderText = "fecha_ingreso";
+            this.fechaingresoDataGridViewTextBoxColumn.Name = "fechaingresoDataGridViewTextBoxColumn";
+            this.fechaingresoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cantidadDataGridViewTextBoxColumn
+            // 
+            this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "cantidad";
+            this.cantidadDataGridViewTextBoxColumn.HeaderText = "cantidad";
+            this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
+            this.cantidadDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fechavencDataGridViewTextBoxColumn
+            // 
+            this.fechavencDataGridViewTextBoxColumn.DataPropertyName = "fecha_venc";
+            this.fechavencDataGridViewTextBoxColumn.HeaderText = "fecha_venc";
+            this.fechavencDataGridViewTextBoxColumn.Name = "fechavencDataGridViewTextBoxColumn";
+            this.fechavencDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fKLotesArticuloBindingSource
+            // 
+            this.fKLotesArticuloBindingSource.DataMember = "FK_Lotes_Articulo";
+            this.fKLotesArticuloBindingSource.DataSource = this.articuloBindingSource;
+            // 
+            // articuloBindingSource
+            // 
+            this.articuloBindingSource.DataMember = "Articulo";
+            this.articuloBindingSource.DataSource = this.controlStockDataSet;
+            // 
+            // controlStockDataSet
+            // 
+            this.controlStockDataSet.DataSetName = "ControlStockDataSet";
+            this.controlStockDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label1
             // 
@@ -192,24 +240,9 @@
             this.label5.TabIndex = 13;
             this.label5.Text = "control de stock farmacia";
             // 
-            // controlStockDataSet
-            // 
-            this.controlStockDataSet.DataSetName = "ControlStockDataSet";
-            this.controlStockDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // articuloBindingSource
-            // 
-            this.articuloBindingSource.DataMember = "Articulo";
-            this.articuloBindingSource.DataSource = this.controlStockDataSet;
-            // 
             // articuloTableAdapter
             // 
             this.articuloTableAdapter.ClearBeforeFill = true;
-            // 
-            // fKLotesArticuloBindingSource
-            // 
-            this.fKLotesArticuloBindingSource.DataMember = "FK_Lotes_Articulo";
-            this.fKLotesArticuloBindingSource.DataSource = this.articuloBindingSource;
             // 
             // lotesTableAdapter
             // 
@@ -220,60 +253,20 @@
             this.articuloBindingSource1.DataMember = "Articulo";
             this.articuloBindingSource1.DataSource = this.controlStockDataSet;
             // 
-            // idloteDataGridViewTextBoxColumn
-            // 
-            this.idloteDataGridViewTextBoxColumn.DataPropertyName = "id_lote";
-            this.idloteDataGridViewTextBoxColumn.HeaderText = "id_lote";
-            this.idloteDataGridViewTextBoxColumn.Name = "idloteDataGridViewTextBoxColumn";
-            this.idloteDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // codarticuloDataGridViewTextBoxColumn
-            // 
-            this.codarticuloDataGridViewTextBoxColumn.DataPropertyName = "cod_articulo";
-            this.codarticuloDataGridViewTextBoxColumn.HeaderText = "cod_articulo";
-            this.codarticuloDataGridViewTextBoxColumn.Name = "codarticuloDataGridViewTextBoxColumn";
-            this.codarticuloDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fechaingresoDataGridViewTextBoxColumn
-            // 
-            this.fechaingresoDataGridViewTextBoxColumn.DataPropertyName = "fecha_ingreso";
-            this.fechaingresoDataGridViewTextBoxColumn.HeaderText = "fecha_ingreso";
-            this.fechaingresoDataGridViewTextBoxColumn.Name = "fechaingresoDataGridViewTextBoxColumn";
-            this.fechaingresoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cantidadDataGridViewTextBoxColumn
-            // 
-            this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "cantidad";
-            this.cantidadDataGridViewTextBoxColumn.HeaderText = "cantidad";
-            this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
-            this.cantidadDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fechavencDataGridViewTextBoxColumn
-            // 
-            this.fechavencDataGridViewTextBoxColumn.DataPropertyName = "fecha_venc";
-            this.fechavencDataGridViewTextBoxColumn.HeaderText = "fecha_venc";
-            this.fechavencDataGridViewTextBoxColumn.Name = "fechavencDataGridViewTextBoxColumn";
-            this.fechavencDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fKLotesArticuloBindingSource1
-            // 
-            this.fKLotesArticuloBindingSource1.DataMember = "FK_Lotes_Articulo";
-            this.fKLotesArticuloBindingSource1.DataSource = this.articuloBindingSource;
-            // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(562, 256);
+            this.button5.Location = new System.Drawing.Point(585, 250);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(234, 33);
             this.button5.TabIndex = 14;
-            this.button5.Text = "modificar";
+            this.button5.Text = "despachar";
             this.button5.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(831, 450);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button4);
@@ -293,11 +286,10 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.controlStockDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.articuloBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKLotesArticuloBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.articuloBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.controlStockDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.articuloBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKLotesArticuloBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -330,7 +322,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaingresoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechavencDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource fKLotesArticuloBindingSource1;
         private System.Windows.Forms.Button button5;
     }
 }
