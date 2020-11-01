@@ -40,7 +40,6 @@
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlPrecio = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.pnlCantidad = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -51,23 +50,21 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.pnlProducto = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtnombre = new System.Windows.Forms.TextBox();
             this.pnlTroquel = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.panel2.SuspendLayout();
-            this.pnlPrecio.SuspendLayout();
             this.pnlCantidad.SuspendLayout();
             this.pnlVto.SuspendLayout();
             this.panelFecha.SuspendLayout();
             this.pnlProducto.SuspendLayout();
-            this.pnlTroquel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,7 +88,7 @@
             this.btnDespachar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDespachar.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnDespachar.ForeColor = System.Drawing.Color.White;
-            this.btnDespachar.Location = new System.Drawing.Point(43, 418);
+            this.btnDespachar.Location = new System.Drawing.Point(33, 481);
             this.btnDespachar.Name = "btnDespachar";
             this.btnDespachar.Size = new System.Drawing.Size(162, 33);
             this.btnDespachar.TabIndex = 12;
@@ -117,7 +114,7 @@
             this.btnCargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCargar.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCargar.ForeColor = System.Drawing.Color.White;
-            this.btnCargar.Location = new System.Drawing.Point(33, 350);
+            this.btnCargar.Location = new System.Drawing.Point(33, 431);
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(162, 33);
             this.btnCargar.TabIndex = 0;
@@ -179,6 +176,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(248)))), ((int)(((byte)(92)))));
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.pnlPrecio);
             this.panel2.Controls.Add(this.pnlCantidad);
             this.panel2.Controls.Add(this.pnlVto);
@@ -196,19 +194,11 @@
             // 
             // pnlPrecio
             // 
-            this.pnlPrecio.Controls.Add(this.textBox4);
             this.pnlPrecio.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlPrecio.Location = new System.Drawing.Point(0, 156);
             this.pnlPrecio.Name = "pnlPrecio";
             this.pnlPrecio.Size = new System.Drawing.Size(243, 52);
             this.pnlPrecio.TabIndex = 29;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(89, 20);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 19;
             // 
             // pnlCantidad
             // 
@@ -290,8 +280,8 @@
             // 
             // pnlProducto
             // 
+            this.pnlProducto.Controls.Add(this.comboBox1);
             this.pnlProducto.Controls.Add(this.label2);
-            this.pnlProducto.Controls.Add(this.txtnombre);
             this.pnlProducto.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlProducto.Location = new System.Drawing.Point(0, 52);
             this.pnlProducto.Name = "pnlProducto";
@@ -306,35 +296,19 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(5, 16);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 20);
+            this.label2.Size = new System.Drawing.Size(61, 20);
             this.label2.TabIndex = 19;
-            this.label2.Text = "conbobox";
+            this.label2.Text = "articulo";
             this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // txtnombre
-            // 
-            this.txtnombre.Location = new System.Drawing.Point(89, 16);
-            this.txtnombre.Name = "txtnombre";
-            this.txtnombre.Size = new System.Drawing.Size(100, 20);
-            this.txtnombre.TabIndex = 20;
-            this.txtnombre.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // pnlTroquel
             // 
             this.pnlTroquel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.pnlTroquel.Controls.Add(this.textBox1);
             this.pnlTroquel.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTroquel.Location = new System.Drawing.Point(0, 0);
             this.pnlTroquel.Name = "pnlTroquel";
             this.pnlTroquel.Size = new System.Drawing.Size(243, 52);
             this.pnlTroquel.TabIndex = 23;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(89, 16);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 18;
             // 
             // dataGridView1
             // 
@@ -352,6 +326,28 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(728, 46);
             this.panel9.TabIndex = 26;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(163)))), ((int)(((byte)(124)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(33, 534);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(162, 33);
+            this.button1.TabIndex = 30;
+            this.button1.Text = "Nuevo articulo";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(91, 18);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 20;
             // 
             // frmMenu
             // 
@@ -373,8 +369,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.pnlPrecio.ResumeLayout(false);
-            this.pnlPrecio.PerformLayout();
             this.pnlCantidad.ResumeLayout(false);
             this.pnlCantidad.PerformLayout();
             this.pnlVto.ResumeLayout(false);
@@ -383,8 +377,6 @@
             this.panelFecha.PerformLayout();
             this.pnlProducto.ResumeLayout(false);
             this.pnlProducto.PerformLayout();
-            this.pnlTroquel.ResumeLayout(false);
-            this.pnlTroquel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -403,7 +395,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel pnlVto;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panelFecha;
@@ -414,11 +405,11 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel pnlPrecio;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Panel pnlCantidad;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox3;
-        public System.Windows.Forms.TextBox txtnombre;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 

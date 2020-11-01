@@ -34,7 +34,6 @@ namespace Negocio
                 MessageBox.Show("no se pude insertar los datos por : " + ex);
                
             }
-         
               
          
         }

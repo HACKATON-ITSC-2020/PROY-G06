@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using Negocio;
+using Vitas_Stock.MainForms;
 
 //pruebazsczc
 //nuevo comentario
@@ -73,7 +74,14 @@ namespace FE
 
         private void btnCargar_Click(object sender, EventArgs e)
         {
-            pro.InsertarArticulo(txtnombre.Text);
+          //  pro.InsertarArticulo(txtnombre.Text);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Articulos frm = new Articulos();
+
+            frm.Show();
         }
     }
 }
