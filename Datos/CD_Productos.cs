@@ -16,7 +16,7 @@ namespace Datos
         DataTable tabla = new DataTable();
         SqlCommand comando = new SqlCommand();
 
-        public DataTable Mostrar()
+        public DataTable MostrarP()
         {
 
             comando.Connection = conexion.AbrirConexion();
