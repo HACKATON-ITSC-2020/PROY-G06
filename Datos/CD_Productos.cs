@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace Datos
 {
@@ -14,6 +15,7 @@ namespace Datos
         SqlDataReader leer;
         DataTable tabla = new DataTable();
         SqlCommand comando = new SqlCommand();
+
         public DataTable Mostrar()
         {
 
@@ -30,17 +32,16 @@ namespace Datos
         public void InsertarA(string nombre )
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "insert into Articulo values ("+nombre+")";
-            comando.CommandType = CommandType.Text;
-           // comando.ExecuteNonQuery();
+            //MessageBox.Show("insert into Articulo(Nombre) values("+nombre+")");
+            comando.CommandText = "insert into Articulo (Nombre) values ('"+nombre+"')";
+            //comando.CommandType = CommandType.Text;
+           comando.ExecuteNonQuery();
 
             conexion.CerrarConexion();
 
         }
         public void CargarL(int idlote, int cod, DateTime fi, int cant, DateTime fv)
         {
-            comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "insert into Lotes(id_lote, cod_articulo, fecha_ingreso, cantidad, fecha_venc) values(@idlote, @cod, @fi, @cant, @fv)";
 
 
         }

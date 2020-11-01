@@ -20,13 +20,13 @@ namespace Negocio
        
         public void InsertarArticulo(string nombre)
         {
-            objetoCD.InsertarA(nombre);
-            MessageBox.Show("se inserto correctamente");
+            
 
             try
             {
-         
-               // MostrarProd();
+                objetoCD.InsertarA(nombre);
+
+                MessageBox.Show("se inserto correctamente"); 
 
             }
             catch (Exception ex)

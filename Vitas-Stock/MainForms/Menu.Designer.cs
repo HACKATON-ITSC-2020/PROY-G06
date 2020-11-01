@@ -40,7 +40,6 @@
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlPrecio = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.pnlCantidad = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -54,7 +53,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.pnlTroquel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -93,7 +91,7 @@
             this.btnDespachar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDespachar.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnDespachar.ForeColor = System.Drawing.Color.White;
-            this.btnDespachar.Location = new System.Drawing.Point(33, 481);
+            this.btnDespachar.Location = new System.Drawing.Point(43, 418);
             this.btnDespachar.Name = "btnDespachar";
             this.btnDespachar.Size = new System.Drawing.Size(162, 33);
             this.btnDespachar.TabIndex = 12;
@@ -119,7 +117,7 @@
             this.btnCargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCargar.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCargar.ForeColor = System.Drawing.Color.White;
-            this.btnCargar.Location = new System.Drawing.Point(33, 431);
+            this.btnCargar.Location = new System.Drawing.Point(33, 350);
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(162, 33);
             this.btnCargar.TabIndex = 0;
@@ -198,25 +196,12 @@
             // 
             // pnlPrecio
             // 
-            this.pnlPrecio.Controls.Add(this.label6);
             this.pnlPrecio.Controls.Add(this.textBox4);
             this.pnlPrecio.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlPrecio.Location = new System.Drawing.Point(0, 156);
             this.pnlPrecio.Name = "pnlPrecio";
             this.pnlPrecio.Size = new System.Drawing.Size(243, 52);
             this.pnlPrecio.TabIndex = 29;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Yu Gothic UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(5, 20);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 20);
-            this.label6.TabIndex = 19;
-            this.label6.Text = "| Precio";
             // 
             // textBox4
             // 
@@ -321,9 +306,9 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(5, 16);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 20);
+            this.label2.Size = new System.Drawing.Size(78, 20);
             this.label2.TabIndex = 19;
-            this.label2.Text = "| Producto";
+            this.label2.Text = "conbobox";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtnombre
@@ -337,25 +322,12 @@
             // pnlTroquel
             // 
             this.pnlTroquel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.pnlTroquel.Controls.Add(this.label1);
             this.pnlTroquel.Controls.Add(this.textBox1);
             this.pnlTroquel.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTroquel.Location = new System.Drawing.Point(0, 0);
             this.pnlTroquel.Name = "pnlTroquel";
             this.pnlTroquel.Size = new System.Drawing.Size(243, 52);
             this.pnlTroquel.TabIndex = 23;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(5, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 20);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "| Troquel";
             // 
             // textBox1
             // 
@@ -430,7 +402,6 @@
         private System.IO.FileSystemWatcher fileSystemWatcher1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel pnlVto;
@@ -443,7 +414,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel pnlPrecio;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Panel pnlCantidad;
         private System.Windows.Forms.Label label4;
