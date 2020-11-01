@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using Negocio;
 using Vitas_Stock.MainForms;
+using Datos;
 
 //pruebazsczc
 //nuevo comentario
@@ -18,6 +19,9 @@ namespace FE
 
     public partial class frmMenu : Form
     {
+        DataTable tabla = new DataTable();
+
+        CD_Productos objetoCD = new CD_Productos();
         CN_Productos pro = new CN_Productos();
         public frmMenu()
         {
@@ -70,6 +74,14 @@ namespace FE
         private void frmMenu_Load(object sender, EventArgs e)
         {
             //dataGridView1.DataSource = pro.MostrarProd();
+
+            tabla = objetoCD.MostrarCB();
+            cbProductos.DataSource = tabla;
+            cbProductos.DisplayMember = "Nombre";
+            cbProductos.ValueMember = "id_articulo";
+           
+
+            //
         }
 
         private void btnCargar_Click(object sender, EventArgs e)
@@ -87,6 +99,11 @@ namespace FE
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void cbProductos_SelectedValueChanged(object sender, EventArgs e)
+        {
+           // MessageBox.Show(cbProductos.SelectedValue.ToString());
         }
     }
 }

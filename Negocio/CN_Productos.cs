@@ -11,13 +11,14 @@ namespace Negocio
     {
         
         private CD_Productos objetoCD = new CD_Productos();
-        public void  MostarProductos(ComboBox cd)
-        {
-            //DataTable tabla = new DataTable();
-            //tabla = objetoCD.Mostrar();
-            //return tabla;
 
-            objetoCD.MostrarP();
+
+  
+        public DataTable MostarProductos()
+        {
+            DataTable tabla = new DataTable();
+            tabla = objetoCD.Mostrar();
+            return tabla;
         }
        
         public void InsertarArticulo(string nombre)

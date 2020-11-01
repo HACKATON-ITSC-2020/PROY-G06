@@ -110,6 +110,10 @@
     <None Include="Resources\icoFarmacia.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Datos\Datos.csproj">
+      <Project>{d585e28f-fa12-40be-a1a8-9400721a0ebb}</Project>
+      <Name>Datos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Negocio\Negocio.csproj">
       <Project>{b96a7261-decf-4c6c-8be9-c6620b7c9a05}</Project>
       <Name>Negocio</Name>

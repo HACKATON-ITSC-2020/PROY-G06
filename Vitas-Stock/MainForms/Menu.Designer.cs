@@ -39,6 +39,9 @@
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.pnlPrecio = new System.Windows.Forms.Panel();
             this.pnlCantidad = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -49,14 +52,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pnlProducto = new System.Windows.Forms.Panel();
+            this.cbProductos = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlTroquel = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
@@ -199,6 +199,46 @@
             this.panel2.Size = new System.Drawing.Size(243, 660);
             this.panel2.TabIndex = 15;
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(163)))), ((int)(((byte)(124)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(33, 427);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(162, 33);
+            this.button3.TabIndex = 32;
+            this.button3.Text = "Eliminar";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(163)))), ((int)(((byte)(124)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(33, 388);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(162, 33);
+            this.button2.TabIndex = 31;
+            this.button2.Text = "Modificar";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(163)))), ((int)(((byte)(124)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(33, 534);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(162, 33);
+            this.button1.TabIndex = 30;
+            this.button1.Text = "Nuevo articulo";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // pnlPrecio
             // 
             this.pnlPrecio.Dock = System.Windows.Forms.DockStyle.Top;
@@ -287,13 +327,22 @@
             // 
             // pnlProducto
             // 
-            this.pnlProducto.Controls.Add(this.comboBox1);
+            this.pnlProducto.Controls.Add(this.cbProductos);
             this.pnlProducto.Controls.Add(this.label2);
             this.pnlProducto.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlProducto.Location = new System.Drawing.Point(0, 52);
             this.pnlProducto.Name = "pnlProducto";
             this.pnlProducto.Size = new System.Drawing.Size(243, 52);
             this.pnlProducto.TabIndex = 24;
+            // 
+            // cbProductos
+            // 
+            this.cbProductos.FormattingEnabled = true;
+            this.cbProductos.Location = new System.Drawing.Point(91, 18);
+            this.cbProductos.Name = "cbProductos";
+            this.cbProductos.Size = new System.Drawing.Size(121, 21);
+            this.cbProductos.TabIndex = 20;
+            this.cbProductos.SelectedValueChanged += new System.EventHandler(this.cbProductos_SelectedValueChanged);
             // 
             // label2
             // 
@@ -333,54 +382,6 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(729, 46);
             this.panel9.TabIndex = 26;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(163)))), ((int)(((byte)(124)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(33, 534);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(162, 33);
-            this.button1.TabIndex = 30;
-            this.button1.Text = "Nuevo articulo";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(91, 18);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 20;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(163)))), ((int)(((byte)(124)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(33, 388);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(162, 33);
-            this.button2.TabIndex = 31;
-            this.button2.Text = "Modificar";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(163)))), ((int)(((byte)(124)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(33, 427);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(162, 33);
-            this.button3.TabIndex = 32;
-            this.button3.Text = "Eliminar";
-            this.button3.UseVisualStyleBackColor = false;
             // 
             // radioButton1
             // 
@@ -480,7 +481,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbProductos;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.RadioButton radioButton3;

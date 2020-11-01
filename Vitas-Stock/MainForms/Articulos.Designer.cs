@@ -34,7 +34,7 @@
             // 
             // btnagregar
             // 
-            this.btnagregar.Location = new System.Drawing.Point(145, 32);
+            this.btnagregar.Location = new System.Drawing.Point(199, 12);
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Size = new System.Drawing.Size(75, 23);
             this.btnagregar.TabIndex = 1;
@@ -44,7 +44,7 @@
             // 
             // txtnombre
             // 
-            this.txtnombre.Location = new System.Drawing.Point(12, 32);
+            this.txtnombre.Location = new System.Drawing.Point(75, 15);
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(100, 20);
             this.txtnombre.TabIndex = 2;
@@ -53,7 +53,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(255, 97);
+            this.ClientSize = new System.Drawing.Size(302, 271);
             this.Controls.Add(this.txtnombre);
             this.Controls.Add(this.btnagregar);
             this.Name = "Articulos";

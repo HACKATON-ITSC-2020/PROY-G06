@@ -16,7 +16,33 @@ namespace Datos
         DataTable tabla = new DataTable();
         SqlCommand comando = new SqlCommand();
 
-        public DataTable MostrarP()
+
+
+        public DataTable MostrarCB()
+        {
+           
+            try
+            {
+                comando.Connection = conexion.AbrirConexion();
+                comando.CommandText = "select * from Articulo";
+                leer = comando.ExecuteReader();
+                tabla.Load(leer);
+                //while (leer.Read())
+                //{
+                //    cb.Items.Add(leer["Nombre"].ToString());
+                //}
+                //leer.Close();
+
+            }
+
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("no se lleno el combobox : " + ex);
+            }
+            return tabla;
+        }
+        public DataTable Mostrar()
         {
 
             comando.Connection = conexion.AbrirConexion();
