@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace Datos
+namespace Negocio
 {
-    class CD_Lostes
+    class CN_Lotes
     {
     }
 }

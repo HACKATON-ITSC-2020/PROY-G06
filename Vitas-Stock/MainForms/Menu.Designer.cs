@@ -196,7 +196,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 56);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(243, 580);
+            this.panel2.Size = new System.Drawing.Size(243, 513);
             this.panel2.TabIndex = 15;
             // 
             // pnlPrecio
@@ -329,7 +329,7 @@
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(163)))), ((int)(((byte)(124)))));
             this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel9.Location = new System.Drawing.Point(243, 590);
+            this.panel9.Location = new System.Drawing.Point(243, 523);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(728, 46);
             this.panel9.TabIndex = 26;
@@ -421,7 +421,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(252)))), ((int)(((byte)(200)))));
-            this.ClientSize = new System.Drawing.Size(971, 636);
+            this.ClientSize = new System.Drawing.Size(971, 569);
             this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
