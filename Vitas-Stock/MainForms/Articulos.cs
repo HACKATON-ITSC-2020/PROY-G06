@@ -32,9 +32,32 @@ namespace Vitas_Stock.MainForms
 
         private void btnagregar_Click(object sender, EventArgs e)
         {
-            pro.InsertarArticulo(txtnombre.Text);
+            InsertarArticulo(txtnombre.Text);
         }
 
+        private void txtnombre_TextChanged(object sender, EventArgs e)
+        {
 
+        }
+
+        public void InsertarArticulo(string nombre)
+        {
+
+
+            try
+            {
+                objetoCD.InsertarA(nombre);
+
+                MessageBox.Show("se inserto correctamente");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("no se pude insertar los datos por : " + ex);
+
+            }
+
+
+        }
     }
 }
