@@ -25,6 +25,31 @@ namespace Datos
             return tabla;
 
         }
+
+        
+        public void InsertarA(string nombre )
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "insert into Articulo values ("+nombre+")";
+            comando.CommandType = CommandType.Text;
+           // comando.ExecuteNonQuery();
+
+            conexion.CerrarConexion();
+
+        }
+        public void CargarL(int idlote, int cod, DateTime fi, int cant, DateTime fv)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "insert into Lotes(id_lote, cod_articulo, fecha_ingreso, cantidad, fecha_venc) values(@idlote, @cod, @fi, @cant, @fv)";
+
+
+        }
+
+
+        public void Despachar(string nombre)
+        {
+
+        }
         public void Insertar(string nombre)
         {
 

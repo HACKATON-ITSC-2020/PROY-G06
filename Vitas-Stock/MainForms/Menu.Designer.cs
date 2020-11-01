@@ -52,7 +52,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.pnlProducto = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtnombre = new System.Windows.Forms.TextBox();
             this.pnlTroquel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -125,6 +125,7 @@
             this.btnCargar.TabIndex = 0;
             this.btnCargar.Text = "Cargar";
             this.btnCargar.UseVisualStyleBackColor = false;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
             // panel1
             // 
@@ -305,7 +306,7 @@
             // pnlProducto
             // 
             this.pnlProducto.Controls.Add(this.label2);
-            this.pnlProducto.Controls.Add(this.textBox2);
+            this.pnlProducto.Controls.Add(this.txtnombre);
             this.pnlProducto.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlProducto.Location = new System.Drawing.Point(0, 52);
             this.pnlProducto.Name = "pnlProducto";
@@ -325,13 +326,13 @@
             this.label2.Text = "| Producto";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // textBox2
+            // txtnombre
             // 
-            this.textBox2.Location = new System.Drawing.Point(89, 16);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 20;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtnombre.Location = new System.Drawing.Point(89, 16);
+            this.txtnombre.Name = "txtnombre";
+            this.txtnombre.Size = new System.Drawing.Size(100, 20);
+            this.txtnombre.TabIndex = 20;
+            this.txtnombre.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // pnlTroquel
             // 
@@ -430,7 +431,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel pnlVto;
@@ -448,6 +448,7 @@
         private System.Windows.Forms.Panel pnlCantidad;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox3;
+        public System.Windows.Forms.TextBox txtnombre;
     }
 }
 

@@ -70,5 +70,10 @@ namespace FE
         {
             //dataGridView1.DataSource = pro.MostrarProd();
         }
+
+        private void btnCargar_Click(object sender, EventArgs e)
+        {
+            pro.InsertarArticulo(txtnombre.Text);
+        }
     }
 }
