@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace Datos
 {
@@ -43,9 +44,9 @@ namespace Datos
 
             }
 
-            catch (Exception ex)
+            catch (Exception)
             {
-
+                MessageBox.Show("Test");
             }
             return tabla;
         }
@@ -61,11 +62,11 @@ namespace Datos
             conexion.CerrarConexion();
 
         }
-        public void CargarL(string nombre, int cantidad, DateTime fecha_ingreso, int fecha_venc, DateTime fecha_egreso)
+        public void CargarL( int cantidad)/*, DateTime fecha_ingreso, DateTime fecha_venc, DateTime fecha_egreso)*/
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "insert into Lotesvalues('"+nombre+ "', " + cantidad + ", " + fecha_ingreso + ", " + fecha_venc + ", " + fecha_egreso + " )";
-
+            comando.CommandText = "insert into Lotes values( " + cantidad + ")";/* " + fecha_ingreso + ", " + fecha_venc + ",  "+fecha_egreso+" );*/
+            comando.ExecuteNonQuery();
 
         }
 

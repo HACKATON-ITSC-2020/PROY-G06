@@ -45,7 +45,7 @@
             this.pnlPrecio = new System.Windows.Forms.Panel();
             this.pnlCantidad = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
             this.pnlVto = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panelFecha = new System.Windows.Forms.Panel();
@@ -251,7 +251,7 @@
             // pnlCantidad
             // 
             this.pnlCantidad.Controls.Add(this.label4);
-            this.pnlCantidad.Controls.Add(this.textBox3);
+            this.pnlCantidad.Controls.Add(this.txtCantidad);
             this.pnlCantidad.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlCantidad.Location = new System.Drawing.Point(0, 104);
             this.pnlCantidad.Name = "pnlCantidad";
@@ -270,12 +270,12 @@
             this.label4.TabIndex = 19;
             this.label4.Text = "| Cantidad";
             // 
-            // textBox3
+            // txtCantidad
             // 
-            this.textBox3.Location = new System.Drawing.Point(89, 20);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 19;
+            this.txtCantidad.Location = new System.Drawing.Point(89, 20);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(100, 20);
+            this.txtCantidad.TabIndex = 19;
             // 
             // pnlVto
             // 
@@ -495,7 +495,7 @@
         private System.Windows.Forms.Panel pnlPrecio;
         private System.Windows.Forms.Panel pnlCantidad;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox cbProductos;
         private System.Windows.Forms.Button button3;

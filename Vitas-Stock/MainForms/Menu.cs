@@ -80,7 +80,6 @@ namespace FE
             cbProductos.DisplayMember = "Nombre";
             cbProductos.ValueMember = "id_articulo";
 
-            DataTable tablae = new DataTable();
             dataGridView1.DataSource = objetoCD.Mostrar();
 
 
@@ -89,8 +88,18 @@ namespace FE
 
         private void btnCargar_Click(object sender, EventArgs e)
         {
+            //(string nombre, int cantidad, DateTime fecha_ingreso, DateTime fecha_venc, DateTime fecha_egreso)
             //  pro.InsertarArticulo(txtnombre.Text);
-          
+            try
+            {
+                objLote.mandarlote(txtCantidad.Text);
+                MessageBox.Show("se inserto correctamente");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("no sepudo instar los datos por : " + ex);
+            }
+     
         }
 
         private void button1_Click(object sender, EventArgs e)
