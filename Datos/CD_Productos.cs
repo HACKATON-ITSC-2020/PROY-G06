@@ -17,25 +17,27 @@ namespace Datos
         SqlCommand comando = new SqlCommand();
         public DataTable Mostrar()
         {
-
+            DataTable tabla3 = new DataTable();
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "select  a.nombre , l.fecha_ingreso, l.cantidad, l.fecha_venc from Articulo a, Lotes l where a.id_articulo = l.cod_articulo";
             leer = comando.ExecuteReader();
-            tabla.Load(leer);
+            tabla3.Load(leer);
             conexion.CerrarConexion();
-            return tabla;
+            return tabla3;
 
         }
 
         public DataTable MostrarCB()
         {
-
+            DataTable tabla4 = new DataTable();
             try
             {
+                
+
                 comando.Connection = conexion.AbrirConexion();
                 comando.CommandText = "select * from Articulo";
                 leer = comando.ExecuteReader();
-                tabla.Load(leer);
+                tabla4.Load(leer);
                 //while (leer.Read())
                 //{
                 //    cb.Items.Add(leer["Nombre"].ToString());
@@ -48,47 +50,52 @@ namespace Datos
             {
                 MessageBox.Show("Test");
             }
-            return tabla;
+            return tabla4;
         }
 
 
         public void InsertarA(string nombre )
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "insert into Articulo values ("+nombre+")";
+            comando.CommandText = "insert into Articulo values ('"+nombre+"')";
             comando.CommandType = CommandType.Text;
-           // comando.ExecuteNonQuery();
+            comando.ExecuteNonQuery();
 
             conexion.CerrarConexion();
 
         }
-        public void CargarL( int cantidad)/*, DateTime fecha_ingreso, DateTime fecha_venc, DateTime fecha_egreso)*/
+        public void CargarL(int cod_art ,int cantidad, string fecha_ingreso, string fecha_venc)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "insert into Lotes values( " + cantidad + ")";/* " + fecha_ingreso + ", " + fecha_venc + ",  "+fecha_egreso+" );*/
+            //comando.CommandText = "insert into Lotes values( " + cantidad + ", " + fecha_ingreso + ", " + fecha_venc + ",  "+fecha_egreso+" )";
+            comando.CommandText = String.Format("insert into Lotes (cod_articulo, cantidad, fecha_ingreso, fecha_venc) values({0},{1},'{2}','{3}')", cod_art,cantidad,fecha_ingreso,fecha_venc);
+            comando.ExecuteNonQuery();
+            conexion.CerrarConexion();
+        }
+
+
+        public void Despachar(int cantidad, int cod_articulo)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = String.Format("update Lotes set cantidad = {0}  where fecha_venc in (select  min (fecha_venc) from Lotes where cod_articulo = {1} )  and cod_articulo = {1} ", cantidad,cod_articulo);
             comando.ExecuteNonQuery();
 
+            conexion.CerrarConexion();
         }
 
-
-        public void Despachar(string nombre)
+        public string funcDesc(int cod_art)
         {
+            DataTable tabla2 = new DataTable();
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = String.Format("select top 1 cantidad from Lotes where cod_articulo = {0} order by fecha_venc", cod_art);
+            //comando.ExecuteNonQuery() ;
+           var cantidad = comando.ExecuteScalar();
+           
+
+            return cantidad.ToString() ;
 
         }
-        public void Insertar(string nombre)
-        {
 
-   
-
-        }
-        public void Editar(string nombre)
-        {
-            
-        }
-        public void Eliminar(int id)
-        {
-     
-        }
 
     }
 }

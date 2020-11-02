@@ -79,7 +79,7 @@ namespace FE
             cbProductos.DataSource = tabla;
             cbProductos.DisplayMember = "Nombre";
             cbProductos.ValueMember = "id_articulo";
-
+            
             dataGridView1.DataSource = objetoCD.Mostrar();
 
 
@@ -88,18 +88,10 @@ namespace FE
 
         private void btnCargar_Click(object sender, EventArgs e)
         {
-            //(string nombre, int cantidad, DateTime fecha_ingreso, DateTime fecha_venc, DateTime fecha_egreso)
-            //  pro.InsertarArticulo(txtnombre.Text);
-            try
-            {
-                objLote.mandarlote(txtCantidad.Text);
-                MessageBox.Show("se inserto correctamente");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("no sepudo instar los datos por : " + ex);
-            }
-     
+        
+            //cod_articulo, fecha_ingreso, cantidad, fecha_venc,
+            objetoCD.CargarL(Convert.ToInt32(cbProductos.SelectedValue.ToString()), Convert.ToInt32(txtCantidad.Text), dtpIngreso.Text, dtpvenci.Text);
+            dataGridView1.DataSource = objetoCD.Mostrar();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -128,7 +120,11 @@ namespace FE
 
         }
 
-
-        
+        private void btnDespachar_Click(object sender, EventArgs e)
+        {
+            int descontar = Convert.ToInt32(objetoCD.funcDesc(Convert.ToInt32(cbProductos.SelectedValue.ToString())))- Convert.ToInt32(txtCantidad.Text);
+            objetoCD.Despachar(descontar, Convert.ToInt32(cbProductos.SelectedValue.ToString()));
+            dataGridView1.DataSource = objetoCD.Mostrar();
+        }
     }
 }

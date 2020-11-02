@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtpIngreso = new System.Windows.Forms.DateTimePicker();
+            this.dtpvenci = new System.Windows.Forms.DateTimePicker();
             this.btnDespachar = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.btnCargar = new System.Windows.Forms.Button();
@@ -74,19 +74,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dateTimePicker1
+            // dtpIngreso
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(89, 19);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(148, 20);
-            this.dateTimePicker1.TabIndex = 6;
+            this.dtpIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpIngreso.Location = new System.Drawing.Point(89, 19);
+            this.dtpIngreso.Name = "dtpIngreso";
+            this.dtpIngreso.Size = new System.Drawing.Size(148, 20);
+            this.dtpIngreso.TabIndex = 6;
             // 
-            // dateTimePicker2
+            // dtpvenci
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(89, 19);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(148, 20);
-            this.dateTimePicker2.TabIndex = 7;
+            this.dtpvenci.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpvenci.Location = new System.Drawing.Point(89, 19);
+            this.dtpvenci.Name = "dtpvenci";
+            this.dtpvenci.Size = new System.Drawing.Size(148, 20);
+            this.dtpvenci.TabIndex = 7;
             // 
             // btnDespachar
             // 
@@ -98,8 +100,9 @@
             this.btnDespachar.Name = "btnDespachar";
             this.btnDespachar.Size = new System.Drawing.Size(162, 33);
             this.btnDespachar.TabIndex = 12;
-            this.btnDespachar.Text = "Despechar";
+            this.btnDespachar.Text = "Despachar";
             this.btnDespachar.UseVisualStyleBackColor = false;
+            this.btnDespachar.Click += new System.EventHandler(this.btnDespachar_Click);
             // 
             // lblTitle
             // 
@@ -280,7 +283,7 @@
             // pnlVto
             // 
             this.pnlVto.Controls.Add(this.label3);
-            this.pnlVto.Controls.Add(this.dateTimePicker2);
+            this.pnlVto.Controls.Add(this.dtpvenci);
             this.pnlVto.Location = new System.Drawing.Point(0, 259);
             this.pnlVto.Name = "pnlVto";
             this.pnlVto.Size = new System.Drawing.Size(243, 52);
@@ -301,7 +304,7 @@
             // panelFecha
             // 
             this.panelFecha.Controls.Add(this.label5);
-            this.panelFecha.Controls.Add(this.dateTimePicker1);
+            this.panelFecha.Controls.Add(this.dtpIngreso);
             this.panelFecha.Location = new System.Drawing.Point(0, 208);
             this.panelFecha.Name = "panelFecha";
             this.panelFecha.Size = new System.Drawing.Size(243, 52);
@@ -369,9 +372,11 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(276, 70);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(580, 317);
             this.dataGridView1.TabIndex = 16;
             // 
@@ -471,8 +476,8 @@
         }
 
         #endregion
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtpIngreso;
+        private System.Windows.Forms.DateTimePicker dtpvenci;
         private System.Windows.Forms.Button btnDespachar;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button btnCargar;
