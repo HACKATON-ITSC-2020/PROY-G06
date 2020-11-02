@@ -25,7 +25,7 @@ namespace Vitas_Stock.MainForms
 
         private void Articulos_Load(object sender, EventArgs e)
         {
-
+            btnagregar.Enabled = false;
         }
 
         private void btnagregar_Click(object sender, EventArgs e)
@@ -35,7 +35,14 @@ namespace Vitas_Stock.MainForms
 
         private void txtnombre_TextChanged(object sender, EventArgs e)
         {
-
+            if (txtnombre.Text != "")
+            {
+                btnagregar.Enabled = true;
+            }
+            else
+            {
+                btnagregar.Enabled = false;
+            }
         }
 
         public void InsertarArticulo(string nombre)

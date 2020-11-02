@@ -73,6 +73,15 @@ namespace FE
 
         private void frmMenu_Load(object sender, EventArgs e)
         {
+            //botones y texboox desabilitados
+            cbProductos.Enabled = false;
+            txtCantidad.Enabled = false;
+            dtpIngreso.Enabled = false;
+            dtpvenci.Enabled = false;
+            btnCargar.Enabled = false;
+            btnDespachar.Enabled = false;
+               
+            
             //dataGridView1.DataSource = pro.MostrarProd();
 
             tabla = objetoCD.MostrarCB();
@@ -126,5 +135,37 @@ namespace FE
             objetoCD.Despachar(descontar, Convert.ToInt32(cbProductos.SelectedValue.ToString()));
             dataGridView1.DataSource = objetoCD.Mostrar();
         }
+
+        private void cbProductos_TextUpdate(object sender, EventArgs e)
+        {
+            //habilitacion de texto
+            if (cbProductos.Text != "")
+            {
+                txtCantidad.Enabled = true;
+            }
+            else
+            {
+                txtCantidad.Enabled = false;
+            }
+        }
+
+        private void txtCantidad_VisibleChanged(object sender, EventArgs e)
+        {
+            //habilitacion de fechas y boton
+            if (txtCantidad.Text != "")
+            {
+                dtpIngreso.Enabled = true;
+                dtpvenci.Enabled = true;
+                btnCargar.Enabled = true;
+            }
+            else
+            {
+                dtpIngreso.Enabled = false;
+                dtpvenci.Enabled = false;
+                btnCargar.Enabled = false;
+            }
+        }
+
+        
     }
 }

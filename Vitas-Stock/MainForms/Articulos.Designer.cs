@@ -28,35 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnagregar = new System.Windows.Forms.Button();
             this.txtnombre = new System.Windows.Forms.TextBox();
+            this.btnagregar = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // btnagregar
-            // 
-            this.btnagregar.Location = new System.Drawing.Point(255, 12);
-            this.btnagregar.Name = "btnagregar";
-            this.btnagregar.Size = new System.Drawing.Size(75, 23);
-            this.btnagregar.TabIndex = 1;
-            this.btnagregar.Text = "agregar";
-            this.btnagregar.UseVisualStyleBackColor = true;
-            this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
             // 
             // txtnombre
             // 
-            this.txtnombre.Location = new System.Drawing.Point(120, 15);
+            this.txtnombre.Location = new System.Drawing.Point(53, 28);
             this.txtnombre.Name = "txtnombre";
-            this.txtnombre.Size = new System.Drawing.Size(111, 20);
+            this.txtnombre.Size = new System.Drawing.Size(162, 20);
             this.txtnombre.TabIndex = 2;
             this.txtnombre.TextChanged += new System.EventHandler(this.txtnombre_TextChanged);
+            // 
+            // btnagregar
+            // 
+            this.btnagregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(163)))), ((int)(((byte)(124)))));
+            this.btnagregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnagregar.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnagregar.ForeColor = System.Drawing.Color.White;
+            this.btnagregar.Location = new System.Drawing.Point(53, 70);
+            this.btnagregar.Name = "btnagregar";
+            this.btnagregar.Size = new System.Drawing.Size(162, 33);
+            this.btnagregar.TabIndex = 3;
+            this.btnagregar.Text = "Agregar";
+            this.btnagregar.UseVisualStyleBackColor = false;
             // 
             // Articulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(342, 67);
-            this.Controls.Add(this.txtnombre);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(248)))), ((int)(((byte)(92)))));
+            this.ClientSize = new System.Drawing.Size(278, 142);
             this.Controls.Add(this.btnagregar);
+            this.Controls.Add(this.txtnombre);
             this.Name = "Articulos";
             this.Text = "Articulos";
             this.Load += new System.EventHandler(this.Articulos_Load);
@@ -66,8 +70,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnagregar;
         private System.Windows.Forms.TextBox txtnombre;
+        private System.Windows.Forms.Button btnagregar;
     }
 }
