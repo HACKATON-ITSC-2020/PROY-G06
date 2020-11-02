@@ -21,25 +21,7 @@ namespace Negocio
             return tabla;
         }
        
-        public void InsertarArticulo(string nombre)
-        {
-            
 
-            try
-            {
-                objetoCD.InsertarA(nombre);
-
-                MessageBox.Show("se inserto correctamente"); 
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("no se pude insertar los datos por : " + ex);
-               
-            }
-              
-         
-        }
 
     }
 }

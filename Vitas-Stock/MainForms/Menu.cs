@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
-using Negocio;
 using Vitas_Stock.MainForms;
 using Datos;
+using Vitas_Stock.clases;
 
 //pruebazsczc
 //nuevo comentario
@@ -22,7 +22,7 @@ namespace FE
         DataTable tabla = new DataTable();
 
         CD_Productos objetoCD = new CD_Productos();
-        CN_Productos pro = new CN_Productos();
+       Lotes objLote = new Lotes();
         public frmMenu()
         {
             InitializeComponent();
@@ -79,21 +79,27 @@ namespace FE
             cbProductos.DataSource = tabla;
             cbProductos.DisplayMember = "Nombre";
             cbProductos.ValueMember = "id_articulo";
-           
+
+            DataTable tablae = new DataTable();
+            dataGridView1.DataSource = objetoCD.Mostrar();
+
 
             //
         }
 
         private void btnCargar_Click(object sender, EventArgs e)
         {
-          //  pro.InsertarArticulo(txtnombre.Text);
+            //  pro.InsertarArticulo(txtnombre.Text);
+          
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Articulos frm = new Articulos();
 
-            frm.Show();
+            frm.ShowDialog();
+
+            tabla = objetoCD.MostrarCB();
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -105,5 +111,15 @@ namespace FE
         {
            // MessageBox.Show(cbProductos.SelectedValue.ToString());
         }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+      
+
+
+        }
+
+
+        
     }
 }
