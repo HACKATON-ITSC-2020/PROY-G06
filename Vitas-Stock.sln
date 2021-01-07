@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vitas-Stock", "Vitas-Stock\Vitas-Stock.csproj", "{37851679-371D-4B3F-8AA2-6F4AFC90DC88}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FE", "Vitas-Stock\FE.csproj", "{37851679-371D-4B3F-8AA2-6F4AFC90DC88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Datos", "Datos\Datos.csproj", "{D585E28F-FA12-40BE-A1A8-9400721A0EBB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{37851679-371D-4B3F-8AA2-6F4AFC90DC88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37851679-371D-4B3F-8AA2-6F4AFC90DC88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37851679-371D-4B3F-8AA2-6F4AFC90DC88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D585E28F-FA12-40BE-A1A8-9400721A0EBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D585E28F-FA12-40BE-A1A8-9400721A0EBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D585E28F-FA12-40BE-A1A8-9400721A0EBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D585E28F-FA12-40BE-A1A8-9400721A0EBB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
